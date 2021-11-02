@@ -1,0 +1,250 @@
+.adviser-container {
+    width: var(--main-width);
+    margin: auto;
+    margin-top: var(--main-top-margin);
+
+    .adviser {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 70px;
+
+        .picture {
+            width: 390px;
+            height: 418px;
+        }
+
+        .comment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 400px;
+            margin-left: 10px;
+
+            .content {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 720px;
+                margin-left: 25px;
+
+                .text {
+                    width: 550px;
+                    line-height: 27px;
+                    font-style: italic;
+                    margin: auto;
+                }
+
+                img {
+                    position: absolute;
+                    width: 60px;
+                    height: 54px;
+
+                    &:first-child {
+                        top: -45px;
+                        left: 0;
+                    }
+
+                    &:last-child {
+                        bottom: -20px;
+                        right: 0;
+                    }
+                }
+            }
+
+            .name {
+                font-size: 21px;
+                font-family: inter;
+                font-weight: 400;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            .stJamesPlaceLogo {
+                width: 124px;
+                height: 65px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .adviser-container {
+        .adviser {
+            margin-top: 50px;
+    
+            .picture {
+                width: 350px;
+                height: 380px;
+            }
+    
+            .comment {
+                height: 350px;
+                margin-left: 10px;
+    
+                .content {
+                    width: 650px;
+                    margin-left: 20px;
+    
+                    .text {
+                        width: 500px;
+                        line-height: 25px;
+                    }
+    
+                    img {
+                        width: 50px;
+                        height: 40px;
+    
+                        &:first-child {
+                            top: -35px;
+                        }
+    
+                        &:last-child {
+                            bottom: -20px;
+                        }
+                    }
+                }
+    
+                .name {
+                    font-size: 19px;
+                }
+    
+                .stJamesPlaceLogo {
+                    width: 115px;
+                    height: 55px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .adviser-container {
+        .adviser {
+            margin-top: 50px;
+    
+            .picture {
+                width: 290px;
+                height: 310px;
+                margin-left: 15px;
+            }
+    
+            .comment {
+                height: 320px;
+                margin-left: 10px;
+    
+                .content {
+                    width: 450px;
+                    margin-left: 20px;
+    
+                    .text {
+                        width: 350px;
+                        line-height: 22px;
+                    }
+    
+                    img {
+                        width: 50px;
+                        height: 40px;
+    
+                        &:first-child {
+                            top: -30px;
+                            left: -10px;
+                        }
+    
+                        &:last-child {
+                            bottom: -20px;
+                        }
+                    }
+                }
+    
+                .name {
+                    font-size: 17px;
+                }
+    
+                .stJamesPlaceLogo {
+                    width: 100px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .adviser-container {
+        width: var(--main-width);
+
+        .adviser {
+            align-self: center;
+            flex-direction: column;
+            margin-top: 40px;
+    
+            .picture {
+                width: 290px;
+                height: 330px;
+            }
+    
+            .comment {
+                width: 100%;
+                height: 350px;
+                margin-top: 60px;
+                margin-left: 0;
+    
+                .content {
+                    width: 95%;
+                    margin: auto;
+    
+                    .text {
+                        width: 100%;
+                        line-height: 24px;
+                    }
+    
+                    img {
+                        width: 35px;
+                        height: 25px;
+    
+                        &:first-child {
+                            top: -35px;
+                            left: 0;
+                        }
+    
+                        &:last-child {
+                            bottom: -35px;
+                            right: 0;
+                        }
+                    }
+                }
+    
+                .name {
+                    font-size: 17px;
+                    margin-top: 60px;
+                }
+    
+                .stJamesPlaceLogo {
+                    width: 110px;
+                    height: 50px;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .adviser-container {
+        .adviser {
+            margin-top: 20px;
+    
+            .picture {
+                width: 230px;
+                height: 260px;
+            }
+        }
+    }
+}

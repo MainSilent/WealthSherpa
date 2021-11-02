@@ -1,0 +1,289 @@
+.navbar-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: var(--main-width);
+        height: 100px;
+        margin: auto;
+    }
+
+    .logo, .items {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logo {
+        img {
+            width: 65px;
+            height: 65px;
+        }
+
+        h1 {
+            margin-left: 10px;
+            font-size: 32px;
+            color: var(--text-color);
+            font-weight: 600;
+            font-family: recoleta;
+        }
+    }
+
+    .items {
+        font-size: 17px;
+
+        p {
+            padding: 17px 30px;
+            color: var(--text-color);
+            border-radius: var(--main-radius);
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                background-color: #e9e7e7;
+            }
+
+            &:first-child {
+                padding: 17px 20px;
+            }
+
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+
+        .signup {
+            margin-left: 40px;
+            font-weight: 600;
+            color: white;
+            background-color: var(--main-color);
+
+            &:hover {
+                color: var(--main-color);
+                background-color: var(--main-color-hover);
+            }
+        }
+
+        .login {
+            color: var(--main-color);
+            font-weight: 600;
+
+            &:hover {
+                background-color: var(--main-color-hover);
+            }
+        }
+    }
+
+    // Responsive Menu Icon
+    .items-rwd, #nav-icon {
+        display: none;
+    }
+
+    #nav-icon {
+        width: 50px;
+        height: 50%;
+        margin-right: 5px;
+        position: relative;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        z-index: 2;
+
+        span {
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 35px;
+            background: var(--text-color);
+            border-radius: 50px;
+            opacity: 1;
+            right: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+
+            &:nth-child(1) {
+                top: 0px;
+            }
+
+            &:nth-child(2), &:nth-child(3) {
+                top: 12px;
+            }
+
+            &:nth-child(4) {
+                top: 24px;
+            }
+        }
+
+        &.open {
+            span {
+                &:nth-child(1) {
+                    top: 12px;
+                    width: 0%;
+                    left: 50%;
+                }
+
+                &:nth-child(2) {
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg);
+                }
+
+                &:nth-child(4) {
+                    top: 12px;
+                    width: 0%;
+                    left: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1590px) {
+    .navbar-container {
+        .navbar {
+            height: 90px;
+        }
+    
+        .logo {
+            img {
+                width: 58px;
+                height: 58px;
+            }
+    
+            h1 {
+                margin-left: 8px;
+                font-size: 28px;
+            }
+        }
+    
+        .items {
+            font-size: 15px;
+    
+            p {
+                padding: 15px 28px;
+    
+                &:not(:last-child) {
+                    margin-right: 14px;
+                }
+            }
+    
+            .signup {
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar-container {
+        .navbar {
+            height: 75px;
+        }
+    
+        .logo {
+            img {
+                width: 50px;
+                height: 50px;
+            }
+    
+            h1 {
+                margin-left: 6px;
+                font-size: 24px;
+            }
+        }
+    
+        .items {
+            font-size: 13px;
+    
+            p {
+                padding: 14px 24px;
+    
+                &:first-child {
+                    padding: 14px 18px;
+                }
+    
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+            }
+    
+            .signup {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navbar-container {   
+        .navbar {
+            width: 97%;
+            height: 70px;
+        }
+
+        .logo {
+            img {
+                width: 42px;
+                height: 42px;
+            }
+    
+            h1 {
+                margin-left: 5px;
+                font-size: 22px;
+            }
+        }
+
+        .items {
+            display: none;
+        }
+
+        .items-rwd, #nav-icon {
+            display: block;
+        }
+
+        .items-rwd {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: transparent;
+            backdrop-filter: blur(2.5vw);
+            overflow-x: hidden;
+            transition: 0.4s;
+            padding-top: 80px;
+
+            // Firefox doesn't support backdrop by default
+            @supports not (backdrop-filter: none) {
+                & {
+                  background-color: rgba(255, 255, 255, 0.9);
+                }
+            }
+
+            p {
+                text-align: center;
+                text-decoration: none;
+                padding: 14px 0;
+                font-size: 22px;
+                color: rgba(0, 0, 0, 0.6);
+                display: block;
+                transition: 0.3s;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .active {
+                color: rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
+}

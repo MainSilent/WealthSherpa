@@ -1,0 +1,198 @@
+.reasons-container {
+    width: var(--main-width);
+    margin: auto;
+    margin-top: var(--main-top-margin);
+
+    .reasons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 40px;
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 351px;
+            height: 291px;
+            text-align: center;
+            border-radius: 1vw;
+            transition: 0.4s;
+            opacity: 0;
+            transform: scale(1.4, 1.4);
+
+            &:hover {
+                transition: 0.2s;
+                background-color: #EBF4FF;
+            }
+
+            .name {
+                font-size: 24px;
+                font-weight: 600;
+                color: var(--main-color);
+            }
+
+            .content {
+                line-height: 26px;
+                word-break: break-all;
+                text-align: center;
+
+                &:nth-child(1) {
+                    width: 200px;
+                }
+
+                &:nth-child(2) {
+                    width: 305px;
+                }
+
+                &:nth-child(3) {
+                    width: 321px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .reasons-container {
+        .reasons {
+            margin-top: 35px;
+    
+            & > div {
+                width: 270px;
+                height: 231px;
+    
+                .name {
+                    font-size: 20px;
+                }
+    
+                .content {
+                    line-height: 24px;
+                    width: 100px;
+                }
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .reasons-container {
+        .reasons {
+            margin-top: 30px;
+    
+            & > div {
+                width: 250px;
+                height: 211px;
+    
+                .name {
+                    font-size: 18px;
+                }
+    
+                .content {
+                    line-height: 22px;
+                }
+
+                img {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .reasons-container {
+        .reasons {
+            margin-top: 25px;
+    
+            & > div {
+                width: 210px;
+                height: 200px;
+    
+                .name {
+                    font-size: 17.5px;
+                }
+    
+                .content {
+                    line-height: 21px;
+                    font-size: 14px;
+                }
+
+                img {
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .reasons-container {
+        margin-top: var(--main-top-margin) !important;
+    
+        .reasons {
+            flex-direction: column;
+            margin-top: 20px;
+    
+            & > div {
+                width: 260px;
+                height: 250px;
+                margin-top: 30px;
+    
+                .name {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: var(--main-color);
+                }
+    
+                .content {
+                    line-height: 25px;
+                    font-size: 16px;
+                    word-break: break-all;
+                    text-align: center;
+                    width: 100px;
+                }
+
+                img {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .reasons-container {
+        .reasons {
+            & > div {
+                width: 210px;
+                height: 200px;
+                margin-top: 20px;
+    
+                .name {
+                    font-size: 17.5px;
+                }
+    
+                .content {
+                    line-height: 21px;
+                    font-size: 14px;
+                }
+
+                img {
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+        }
+    }
+}

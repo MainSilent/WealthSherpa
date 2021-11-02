@@ -1,0 +1,81 @@
+.home {
+    --main-top-margin: 150px;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 115px;
+
+    @import "./home/intro.scss";
+
+    .title {
+        font-size: 44px;
+        font-weight: 600;
+        font-family: recoleta;
+    }
+
+    .description {
+        margin-top: 15px;
+        font-weight: 400;
+        font-family: inter;
+    }
+
+    @import "./home/reasons.scss";
+    @import "./home/steps.scss";
+    @import "./home/video.scss";
+    @import "./home/adviser.scss";
+    @import "./home/banner.scss";
+    @import "./home/owner.scss";
+    @import "./home/faqs.scss";
+}
+
+@media screen and (max-width: 1590px) {
+    .home {
+        .title {
+            font-size: 35px;
+        }
+    
+        .description {
+            margin-top: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .home {
+        .title {
+            font-size: 30px;
+        }
+    
+        .description {
+            margin-top: 10px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 920px) {
+    .home {
+        .title {
+            font-size: 27px;
+        }
+    
+        .description {
+            margin-top: 8px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .home {
+        --main-top-margin: 80px;
+    
+        .title {
+            font-size: 21px;
+        }
+    
+        .description {
+            margin-top: 10px;
+        }
+    }    
+}

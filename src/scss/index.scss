@@ -1,0 +1,102 @@
+@import 'reset.scss';
+@import 'fonts.scss';
+
+:root {
+    --text-color: #42454B;
+    --main-color: #5F82AE;
+    --main-color-hover: #ccd6e4;
+    --main-radius: 0.5vw;
+    --main-width: 75%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+html, body, #root {
+    min-height: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    font-family: inter;
+    font-weight: 400;
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: var(--text-color);
+    z-index: 1;
+}
+
+@import 'navbar.scss';
+@import 'home.scss';
+@import 'footer.scss';
+
+@media screen and (max-width: 1590px) {
+    :root {
+        --main-width: 85%;
+    }
+    #root {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    :root {
+        --main-width: 95%;
+    }
+    #root {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    * {
+        cursor: default !important;
+
+        &:focus {
+            outline:none;
+        }
+    }
+    :root {
+        --main-width: 94%;
+        --main-radius: 1vw;
+    }
+}
+
+// Large Displays
+@media screen and (min-width: 2200px) {
+    :root {
+        --main-width: 60%;
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    :root {
+        --main-width: 50%;
+    }
+}
+
+@media screen and (min-width: 4000px) {
+    :root {
+        --main-width: 30%;
+    }
+}
