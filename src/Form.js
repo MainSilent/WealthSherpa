@@ -23,17 +23,16 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Form = ({ type, handleClose }) => {
+const Form = () => {
   const classes = useStyles();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const type = window.location.pathname.replace(/\//g, '')
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(firstName, lastName, email, password);
-    handleClose();
   };
 
   return (
@@ -69,9 +68,6 @@ const Form = ({ type, handleClose }) => {
         onChange={e => setPassword(e.target.value)}
       />
       <div>
-        <Button variant="contained" onClick={handleClose}>
-          Cancel
-        </Button>
         <Button type="submit" variant="contained" color="primary">
           {type}
         </Button>

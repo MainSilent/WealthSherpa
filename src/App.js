@@ -5,27 +5,33 @@ import {
 } from "react-router-dom"
 import Navbar from './Navbar'
 import Home from './Home'
+import Form from './Form'
 import Footer from './Footer'
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-
       <Router>
+        <Navbar />
+
         <Switch>
-          <Route path={process.env.PUBLIC_URL+'/'} exact>
-            <Home/>
+          <Route path={[process.env.PUBLIC_URL+'/login', process.env.PUBLIC_URL+'/signup']} exact>
+            <Form />
           </Route>
+
+          <Route path={process.env.PUBLIC_URL+'/'} exact>
+            <Home />
+          </Route>
+
           <Route path='*'>
             <h1 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', width: '100vw', fontSize: 26 }}>
               404 - Page Not Found
             </h1>
           </Route>
         </Switch>
-      </Router>
 
-      <Footer />
+        <Footer />
+      </Router>
     </div>
   );
 }

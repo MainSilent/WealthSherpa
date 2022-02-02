@@ -39,7 +39,7 @@
     .items {
         font-size: 17px;
 
-        p {
+        a {
             padding: 17px 30px;
             color: var(--text-color);
             border-radius: var(--main-radius);
@@ -167,7 +167,7 @@
         .items {
             font-size: 15px;
     
-            p {
+            a {
                 padding: 15px 28px;
     
                 &:not(:last-child) {
@@ -203,7 +203,7 @@
         .items {
             font-size: 13px;
     
-            p {
+            a {
                 padding: 14px 24px;
     
                 &:first-child {
@@ -269,7 +269,7 @@
                 }
             }
 
-            p {
+            a {
                 text-align: center;
                 text-decoration: none;
                 padding: 14px 0;
