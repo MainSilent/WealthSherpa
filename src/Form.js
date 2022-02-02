@@ -1,16 +1,7 @@
 import React, { useState } from 'react';
-import Dialog from '@material-ui/core/Dialog';
 import { makeStyles } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
-const ModalDialog = ({ open, type, handleClose }) => {
-    return (
-      <Dialog open={open} onClose={handleClose}>
-        <Form handleClose={handleClose} />
-      </Dialog>
-    );
-}
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -18,6 +9,8 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    width: '100vw',
+    height: '100vh',
     padding: theme.spacing(2),
 
     '& .MuiTextField-root': {
@@ -30,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Form = ({ handleClose }) => {
+const Form = ({ type, handleClose }) => {
   const classes = useStyles();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -80,11 +73,11 @@ const Form = ({ handleClose }) => {
           Cancel
         </Button>
         <Button type="submit" variant="contained" color="primary">
-          Signup
+          {type}
         </Button>
       </div>
     </form>
   );
 };
 
-export default ModalDialog
+export default Form

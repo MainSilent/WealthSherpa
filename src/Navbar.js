@@ -1,29 +1,14 @@
-import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 import Logo from './assets/images/logo.png'
-import ModalDialog from './Form'
 
 function Items() {
-    const [open, setOpen] = useState(false)
-    const [type, setType] = useState('')
-
-    const handleOpen = (_type) => {
-        setOpen(true);
-        setType(_type);
-    }
-
-    const handleClose = () => {
-        setOpen(false);
-    }
-
     return (
         <>
             <p>How it works</p>
             <p>FAQ</p>
 
-            <p className="signup" onClick={() => handleOpen('signup')}>Sign up</p>
-            <p className="login" onClick={() => handleOpen('login')}>Log in</p>
-
-            <ModalDialog open={open} type={type} handleClose={handleClose} />
+            <p className="signup">Sign up</p>
+            <p className="login">Log in</p>
         </>
     )
 }
