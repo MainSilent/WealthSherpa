@@ -1,7 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import Logo from './assets/images/logo.png'
+import ModalDialog from './Form'
 
 function Items() {
+    const [open, setOpen] = useState(false)
+
+    const handleOpen = () => {
+        setOpen(true);
+    }
+
+    const handleClose = () => {
+        setOpen(false);
+    }
+
     return (
         <>
             <p>How it works</p>
@@ -9,6 +20,8 @@ function Items() {
 
             <p className="signup">Sign up</p>
             <p className="login">Log in</p>
+
+            <ModalDialog open={open} handleClose={handleClose} />
         </>
     )
 }
