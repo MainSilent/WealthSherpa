@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-const ModalDialog = ({ open, handleClose }) => {
+const ModalDialog = ({ open, type, handleClose }) => {
     return (
       <Dialog open={open} onClose={handleClose}>
         <Form handleClose={handleClose} />

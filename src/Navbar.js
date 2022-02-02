@@ -4,9 +4,11 @@ import ModalDialog from './Form'
 
 function Items() {
     const [open, setOpen] = useState(false)
+    const [type, setType] = useState('')
 
-    const handleOpen = () => {
+    const handleOpen = (_type) => {
         setOpen(true);
+        setType(_type);
     }
 
     const handleClose = () => {
@@ -18,10 +20,10 @@ function Items() {
             <p>How it works</p>
             <p>FAQ</p>
 
-            <p className="signup">Sign up</p>
-            <p className="login">Log in</p>
+            <p className="signup" onClick={() => handleOpen('signup')}>Sign up</p>
+            <p className="login" onClick={() => handleOpen('login')}>Log in</p>
 
-            <ModalDialog open={open} handleClose={handleClose} />
+            <ModalDialog open={open} type={type} handleClose={handleClose} />
         </>
     )
 }
