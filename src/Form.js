@@ -29,7 +29,7 @@ const Form = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const type = window.location.pathname.replace(/\//g, '')
+  const type = window.location.pathname.replace(/\//g, '').toLowerCase()
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -37,20 +37,24 @@ const Form = () => {
 
   return (
     <form className={classes.root} onSubmit={handleSubmit}>
+      {type === "signup" &&
       <TextField
-        label="First Name"
-        variant="filled"
-        required
-        value={firstName}
-        onChange={e => setFirstName(e.target.value)}
-      />
+          label="First Name"
+          variant="filled"
+          required
+          value={firstName}
+          onChange={e => setFirstName(e.target.value)}
+        />
+      }
+      {type === "signup" &&
       <TextField
-        label="Last Name"
-        variant="filled"
-        required
-        value={lastName}
-        onChange={e => setLastName(e.target.value)}
-      />
+          label="Last Name"
+          variant="filled"
+          required
+          value={lastName}
+          onChange={e => setLastName(e.target.value)}
+        />
+      }
       <TextField
         label="Email"
         variant="filled"

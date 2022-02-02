@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
-import { NavLink as Link } from 'react-router-dom'
 import Logo from './assets/images/logo.png'
 
 function Items() {
     return (
         <>
-            <Link to='/'>How it works</Link>
-            <Link to='/'>FAQ</Link>
+            <a href='/'>How it works</a>
+            <a href='/'>FAQ</a>
 
-            <Link to='/signup' className="signup">Sign up</Link>
-            <Link to='/login' className="login">Log in</Link>
+            <a href='/signup' className="signup">Sign up</a>
+            <a href='/login' className="login">Log in</a>
         </>
     )
 }
