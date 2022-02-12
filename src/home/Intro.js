@@ -75,7 +75,7 @@ class Intro extends Component {
                         partners
                     </span>
 
-                    <a href="/">Start now</a>
+                    <a href={process.env.PUBLIC_URL+'/'}>Start now</a>
                 </div>
 
                 <div className="preview">

@@ -7,15 +7,15 @@ export default class Footer extends Component {
             <div className="footer-container">
                 <div className="footer">
                     <div className="logo">
-                        <a href="/"><img src={Logo} alt="Logo" /></a>
-                        <a href="/"><h1>Wealth Sherpa</h1></a>
+                        <a href={process.env.PUBLIC_URL+'/'}><img src={Logo} alt="Logo" /></a>
+                        <a href={process.env.PUBLIC_URL+'/'}><h1>Wealth Sherpa</h1></a>
                     </div>
                     
                     <p>© St. James’s Place Wealth Management Group</p>
 
                     <div className="items">
-                        <a href="/">Terms of use</a>
-                        <a href="/">Privacy Policy</a>
+                        <a href={process.env.PUBLIC_URL+'/'}>Terms of use</a>
+                        <a href={process.env.PUBLIC_URL+'/'}>Privacy Policy</a>
                     </div>
                 </div>
             </div>

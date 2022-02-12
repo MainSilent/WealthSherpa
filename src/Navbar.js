@@ -4,11 +4,11 @@ import Logo from './assets/images/logo.png'
 function Items() {
     return (
         <>
-            <a href='/'>How it works</a>
-            <a href='/'>FAQ</a>
+            <a href={process.env.PUBLIC_URL+'/'}>How it works</a>
+            <a href={process.env.PUBLIC_URL+'/'}>FAQ</a>
 
-            <a href='/signup' className="signup">Sign up</a>
-            <a href='/login' className="login">Log in</a>
+            <a href={process.env.PUBLIC_URL+'/signup'} className="signup">Sign up</a>
+            <a href={process.env.PUBLIC_URL+'/login'} className="login">Log in</a>
         </>
     )
 }
@@ -25,8 +25,8 @@ class Topbar extends Component {
             <div className="navbar-container">
                 <div className="navbar">
                     <div className="logo">
-                        <a href="/"><img src={Logo} alt="Logo" /></a>
-                        <a href="/"><h1>Wealth Sherpa</h1></a>
+                        <a href={process.env.PUBLIC_URL+"/"}><img src={Logo} alt="Logo" /></a>
+                        <a href={process.env.PUBLIC_URL+"/"}><h1>Wealth Sherpa</h1></a>
                     </div>
                     
                     <div className="items">

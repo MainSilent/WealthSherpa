@@ -29,8 +29,12 @@ const Form = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const type = window.location.pathname.replace(/\//g, '').toLowerCase()
-
+  const pathname = window.location.pathname.split('/')
+  let type = pathname.pop().toLowerCase()
+  
+  if (!type)
+    type = pathname.pop().toLowerCase()
+  
   const handleSubmit = e => {
     e.preventDefault();
   };

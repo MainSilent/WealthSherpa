@@ -8,7 +8,7 @@ class Banner extends Component {
                 <div className="content">
                     <h2 className="title">Start saving time on letters now!</h2>
                     <p className="description">Tailored letters in just a few clicks. Save time and make relationships more profitable.</p>
-                    <a className="increase-btn" href='/'>Increase my profit</a>
+                    <a className="increase-btn" href={process.env.PUBLIC_URL+'/'}>Increase my profit</a>
                 </div>
 
                 <div className="ellipse"></div>
