@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Logo from './assets/images/logo.png'
+import { NavLink as Link } from 'react-router-dom'
 
 function Items() {
     return (
@@ -7,8 +8,8 @@ function Items() {
             <a href={process.env.PUBLIC_URL+'/'}>How it works</a>
             <a href={process.env.PUBLIC_URL+'/'}>FAQ</a>
 
-            <a href={process.env.PUBLIC_URL+'/signup'} className="signup">Sign up</a>
-            <a href={process.env.PUBLIC_URL+'/login'} className="login">Log in</a>
+            <Link to={process.env.PUBLIC_URL+'/signup'} className="signup">Sign up</Link>
+            <Link to={process.env.PUBLIC_URL+'/login'} className="login">Log in</Link>
         </>
     )
 }

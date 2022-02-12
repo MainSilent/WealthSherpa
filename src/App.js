@@ -15,7 +15,11 @@ function App() {
         <Navbar />
 
         <Switch>
-          <Route path={[process.env.PUBLIC_URL+'/login', process.env.PUBLIC_URL+'/signup']} exact>
+          <Route path={process.env.PUBLIC_URL+'/signup'} exact>
+            <Form />
+          </Route>
+          
+          <Route path={process.env.PUBLIC_URL+'/login'} exact>
             <Form />
           </Route>
 
